@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year, Lehansa!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+            pointer-events: none;
+        }
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Happy New Year, Lehansa! 🌟</h1>
+        <p>
+            Another year begins, and with it, I just want to tell you<br>
+            how much you brighten my life.<br>
+            Your smile, your warmth, your love — they make my days magical.<br><br>
+            Here's to 2025, full of dreams, joy, and love.<br>
+            With all my heart, <br><strong>Chiran 💖</strong>
+        </p>
+    </div>
+
+    <script>
+        // Sparkle Animation
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.top = `${Math.random() * window.innerHeight}px`;
+            sparkle.style.left = `${Math.random() * window.innerWidth}px`;
+            sparkle.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+
+        // Create sparkles continuously
+        setInterval(createSparkle, 200);
+    </script>
+</body>
+</html>
